@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cap Immigration Pro | Visa Canada en 48h</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">Cap Immigration <span class="gold">PRO</span></div>
+      <nav>
+        <a href="#accueil">Accueil</a>
+        <a href="#apropos">À propos</a>
+        <a href="#formulaire">Inscription</a>
+        <a href="#temoignages">Témoignages</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="accueil" class="hero">
+    <div class="overlay"></div>
+    <div class="container hero-content">
+      <div class="badge">7 ans d'expérience</div>
+      <h1>Obtenez votre visa en <span class="gold">48h</span></h1>
+      <p>Canada • USA • Europe | +1300 clients satisfaits</p>
+      <button class="cta-btn" onclick="scrollToForm()">S'inscrire maintenant</button>
+      <div class="trust">
+        <span>Siège à Toronto</span>
+        <span>Équipe certifiée</span>
+        <span>98% de succès</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- À propos -->
+  <section id="apropos" class="about">
+    <div class="container">
+      <h2>Pourquoi choisir Cap Immigration Pro ?</h2>
+      <div class="grid">
+        <div class="card">
+          <i class="fas fa-passport"></i>
+          <h3>7 ans d'expérience</h3>
+          <p>Depuis 2018, nous accompagnons les Africains vers le Canada.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-headset"></i>
+          <h3>Suivi personnalisé</h3>
+          <p>Un agent dédié vous suit jusqu'à l'obtention du visa.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-check-circle"></i>
+          <h3>Garantie 48h</h3>
+          <p>Analyse de votre dossier en 48h maximum.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-building"></i>
+          <h3>Siège officiel</h3>
+          <p>8 Spadina Ave. Suite 1900, Toronto, ON M5V 0S8, Canada</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulaire -->
+  <section id="formulaire" class="form-section">
+    <div class="container">
+      <h2>Inscription sécurisée (2 min)</h2>
+      <form name="inscription" method="POST" data-netlify="true" enctype="multipart/form-data" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="inscription" />
+        <p class="hidden"><label>Ne pas remplir <input name="bot-field" /></label></p>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Civilité *</label>
+            <select name="civilite" required>
+              <option value="">Choisir...</option>
+              <option value="M.">Monsieur</option>
+              <option value="Mme">Madame</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Nom & Prénom *</label>
+            <input type="text" name="nom_prenom" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Date de naissance *</label>
+            <input type="date" name="date_naissance" required />
+          </div>
+          <div class="form-group">
+            <label>WhatsApp *</label>
+            <input type="tel" name="whatsapp" placeholder="+225 00 00 00 00" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Email *</label>
+          <input type="email" name="email" required />
+        </div>
+
+        <div class="form-group">
+          <label>But de la demande *</label>
+          <textarea name="but_demande" rows="3" required></textarea>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Niveau d’étude *</label>
+            <input type="text" name="niveau_etude" required />
+          </div>
+          <div class="form-group">
+            <label>Expérience *</label>
+            <input type="text" name="experience" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Mode de paiement *</label>
+          <select name="paiement" required>
+            <option value="">Choisir...</option>
+            <option value="Orange Money">Orange Money</option>
+            <option value="Carte de crédit">Carte de crédit</option>
+          </select>
+          <p class="payment-info">
+            <strong>Orange Money :</strong> Tapez <code>#144*11*0787324122#</code> puis suivez les instructions.
+          </p>
+        </div>
+
+        <div class="form-group">
+          <label>Capture de paiement *</label>
+          <input type="file" name="capture_paiement" accept="image/*" required />
+          <p class="info"><strong>Envoyez la capture après paiement pour confirmation.</strong></p>
+        </div>
+
+        <div class="checkboxes">
+          <label><input type="checkbox" required /> J’accepte les <a href="#" onclick="toggleFees()">frais d’inscription (35 000 FCFA)</a></label>
+          <label><input type="checkbox" required /> J’accepte les <a href="#" onclick="toggleCookies()">cookies</a></label>
+        </div>
+
+        <div id="fees-info" class="info-box">
+          <strong>Frais d’inscription : 35 000 FCFA</strong><br>
+          Ces frais couvrent :<br>
+          • Analyse approfondie de votre profil<br>
+          • Orientation personnalisée (avec ou sans diplôme)<br>
+          • Accès aux offres d’emploi<br>
+          • Conseils adaptés (visa, études, travail)<br>
+          • Suivi professionnel jusqu’au visa<br>
+          <strong>Non remboursables après évaluation.</strong>
+        </div>
+
+        <div id="cookies-info" class="info-box">
+          Nous utilisons des cookies pour améliorer votre expérience et analyser le trafic. Vos données sont protégées et jamais vendues. <a href="#">Politique de confidentialité</a>
+        </div>
+
+        <button type="submit" class="submit-btn">Envoyer ma demande</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Témoignages -->
+  <section id="temoignages" class="testimonials">
+    <div class="container">
+      <h2>Ce qu’en disent nos clients</h2>
+      <div class="grid">
+        <div class="card"><img src="https://i.pravatar.cc/150?img=1" alt=""><strong>Aminata Coulibaly</strong> (Mali)<p>"Visa Canada en 3 jours !"</p></div>
+        <div class="card"><img src="https://i.pravatar.cc/150?img=2" alt=""><strong>Issa Traoré</strong> (Burkina)<p>"Service pro, suivi parfait."</p></div>
+        <div class="card"><img src="https://i.pravatar.cc/150?img=3" alt=""><strong>Fatoumata Koné</strong> (Côte d'Ivoire)<p>"Je recommande à 100% !"</p></div>
+        <div class="card"><img src="https://i.pravatar.cc/150?img=5" alt=""><strong>Moussa Diallo</strong> (Mali)<p>"Études au Canada, rêve réalisé."</p></div>
+        <div class="card"><img src="https://i.pravatar.cc/150?img=6" alt=""><strong>Aïcha Ouédraogo</strong> (Burkina)<p>"Équipe très réactive."</p></div>
+        <div class="card"><img src="https://i.pravatar.cc/150?img=7" alt=""><strong>Jean Kouadio</strong> (Côte d'Ivoire)<p>"Tout est clair et rapide."</p></div>
+        <div class="card"><img src="https://i.pravatar.cc/150?img=8" alt=""><strong>Salamata Barry</strong> (Mali)<p>"Merci pour mon visa USA !"</p></div>
+        <div class="card"><img src="https://i.pravatar.cc/150?img=9" alt=""><strong>Adama Sanogo</strong> (Burkina)<p>"Meilleur service immigration."</p></div>
+        <div class="card"><img src="https://i.pravatar.cc/150?img=10" alt=""><strong>Marie N’Guessan</strong> (Côte d'Ivoire)<p>"Suivi jusqu’au bout."</p></div>
+        <div class="card"><img src="https://i.pravatar.cc/150?img=11" alt=""><strong>Ibrahim Sidibé</strong> (Mali)<p>"Parfait pour les étudiants."</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>Cap Immigration Pro</h3>
+          <p>7 ans d'expérience • 98% de succès</p>
+        </div>
+        <div>
+          <p><strong>Siège social :</strong><br>8 Spadina Ave. Suite 1900<br>Toronto, ON M5V 0S8, Canada</p>
+        </div>
+        <div>
+          <p><strong>Contact :</strong><br>
+            <a href="mailto:cap_immigration@hotmail.com">cap_immigration@hotmail.com</a><br>
+            <a href="https://wa.me/12367035938">WhatsApp : +1 (236) 703-5938</a><br>
+            <a href="https://tiktok.com/@cap.immigration" target="_blank">TikTok : @cap.immigration</a>
+          </p>
+        </div>
+      </div>
+      <p class="copyright">© 2025 Cap Immigration Pro. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
